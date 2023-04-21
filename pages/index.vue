@@ -1,8 +1,7 @@
 <template>
 	<div class="container h-screen flex items-center justify-center flex-col">
 
-		<button @click="getUserInfo">获取个人信息</button>
-		<button @click="getAllRepos">获取所有的仓库</button>
+		<h1 class="text-7xl">还在开发中 (Under development ...)</h1>
 
 	</div>
 </template>
