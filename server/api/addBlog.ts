@@ -1,12 +1,14 @@
 // import { PrismaClient } from "@prisma/client";
 import useResponse from "~/composables/useResponse";
-import { createHash } from "crypto";
+
+// @ts-ignore
+import md5 from "md5";
 
 export default defineEventHandler(async (event: any) => {
   const body = await readBody(event);
   const { issueToken } = useRuntimeConfig();
-  
-  const hash = createHash("md5").update(body.password).digest("hex");
+
+  const hash = md5(body.password);
   if (hash != issueToken) {
     return useResponse(undefined, 0, "密码错误");
   }

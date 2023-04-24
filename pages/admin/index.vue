@@ -52,7 +52,8 @@
 </template>
 <script setup lang='ts'>
 import { type PublishInformation } from '~/types';
-
+// @ts-ignore
+import md5 from "md5";
 definePageMeta({
 	layout: "admin"
 })
@@ -69,9 +70,16 @@ const dmessage = ref('')
 
 const submit = async () => {
 	isLoading.value = true
+	const hash = md5(issueInfo.password)
+
+	console.log(hash)
+
 	const { data } = await useFetch('api/addBlog', {
 		method: 'POST',
-		body: issueInfo
+		body: {
+			...issueInfo,
+			password: hash
+		}
 	})
 
 	isLoading.value = false
