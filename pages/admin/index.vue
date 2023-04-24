@@ -2,7 +2,7 @@
 	<div class="flex flex-col items-center">
 		<div class="flex items-center">
 			<span class="w-10 h-10 md:w-14 h-14 mr-8 i-tabler-pencil-plus"></span>
-			<h1 class="text-7 md:text-10 font-600 text-green-800"> Create Blog</h1>
+			<h1 class="text-7 md:text-10 font-600"> 创建 Blog</h1>
 		</div>
 		<div class="w-full m-10  md:p-5 flex flex-col gap-6 md:gap-8">
 
@@ -12,7 +12,7 @@
 					<div class="icon i-tabler-h-1" />
 				</label>
 				<input v-model="issueInfo.title" class="flex-1 bg-transparent appearance-none outline-none" type="text"
-					placeholder="Please enter a title">
+					placeholder="标题">
 			</div>
 
 			<div
@@ -21,7 +21,7 @@
 					<div class="icon i-tabler-brand-github" />
 				</label>
 				<input v-model="issueInfo.githubAddress" class="flex-1 bg-transparent appearance-none outline-none"
-					type="text" placeholder="Please enter the github repository address">
+					type="text" placeholder="GitHhb 地址">
 			</div>
 
 			<div
@@ -30,7 +30,7 @@
 					<div class="icon i-tabler-key" />
 				</label>
 				<input v-model="issueInfo.password" class="flex-1 bg-transparent appearance-none outline-none"
-					type="password" placeholder="Please enter issue token">
+					type="password" placeholder="创建密码">
 			</div>
 
 			<button :disabled="isOpen"
@@ -38,7 +38,7 @@
 				@click="submit">
 				<div
 					:class="[isLoading ? 'i-tabler-loader rotate' : 'i-tabler-cloud-upload', 'mr-8  w-6 h-6  md:w-8 md:h-8 text-white']" />
-				Submit
+				提交
 			</button>
 		</div>
 
