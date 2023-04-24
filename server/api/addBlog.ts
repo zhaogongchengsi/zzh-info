@@ -1,6 +1,5 @@
-// import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import useResponse from "~/composables/useResponse";
-
 // @ts-ignore
 import md5 from "md5";
 
@@ -13,16 +12,24 @@ export default defineEventHandler(async (event: any) => {
     return useResponse(undefined, 0, "密码错误");
   }
 
-  // const prisma = new PrismaClient();
+  if (!!!body.title || !!!body.githubAddress) {
+    return useResponse(undefined, 0, "缺少参数");
+  }
 
-  // await prisma.blog.create({
-  //   data: {
-  //     title: "第一篇blog",
-  //     address: "blog",
-  //   },
-  // });
+  const prisma = new PrismaClient();
 
-  // prisma.$disconnect();
+  try {
 
-  return useResponse(body, 0, "添加成功");
+    await prisma.blog.create({
+      data: {
+        title: body.title,
+        address: body.githubAddress,
+      },
+    });
+
+    return useResponse(body, 0, "添加成功");
+
+  } finally {
+    prisma.$disconnect();
+  }
 });

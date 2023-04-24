@@ -1,5 +1,5 @@
 <template>
-	<div class="container h-screen flex items-center justify-center flex-col">
+	<div class="container min-h-screen flex items-center mx-auto justify-center flex-col">
 
 		<h1 class="text-7xl">还在开发中 (Under development ...)</h1>
 
