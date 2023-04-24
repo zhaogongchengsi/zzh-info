@@ -12,8 +12,8 @@ export default defineNuxtConfig({
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/logo.svg" },
-        // { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "icon", type: "image/png", href: "/logo-96.png" },
+        { rel: "apple-touch-icon", href: "/logo-48.png" },
       ],
       titleTemplate: (title) => `ZZH | ${title}`,
       meta: [
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
 
   devServer: {
-    port: 3030,
+    port: 3060,
     host: "localhost",
   },
 
