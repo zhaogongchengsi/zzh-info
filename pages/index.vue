@@ -11,15 +11,13 @@ definePageMeta({
 	title: "Home | 首页"
 })
 
-const getUserInfo = async () => {
-	const { data } = await useFetch("api/getinfo")
-	console.log(data)
-}
+const res = await useAllRepos()
 
-const getAllRepos = async () => {
-	const { data } = await useFetch("api/getAllRepos")
-	console.log(data.value)
-}
+const repos = computed(() => {
+	return res.data.value
+})
+
+console.log(repos.value)
 
 </script>
 <style lang='scss'>

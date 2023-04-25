@@ -1,6 +1,6 @@
-export async function $fetchGithub(url: string) {
+export async function $fetchGithub<T >(url: string) {
   const { github } = useRuntimeConfig();
-  return await $fetch(`https://api.github.com/${url}`, {
+  return await $fetch<T>(`https://api.github.com/${url}`, {
     headers: {
       Authorization: "Bearer " + github.token,
       "X-GitHub-Api-Version": "2022-11-28",
