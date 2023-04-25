@@ -1,13 +1,24 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode"],
+  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
   components: ["~/components"],
   css: ["~/assets/variable.scss", "@unocss/reset/tailwind.css", "~/assets/main.scss"],
-  // @ts-ignore
+
   colorMode: {
     classSuffix: "",
   },
+
+  googleFonts: {
+    download: true,
+    overwriting: false,
+    families: {
+      Inter: true,
+      Roboto: true,
+      Mulish: true,
+    },
+  },
+
   app: {
     head: {
       viewport: "width=device-width,initial-scale=1",

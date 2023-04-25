@@ -1,0 +1,28 @@
+:root {
+  --header-height: 60px;
+  --scroll-width: 5px;
+  --scroll-height: 5px;
+}
+
+$transparency: 0.6;
+
+html {
+  $page-bg-color: #f7f5f5;
+  // 顶部导航条颜色
+  --page-bg-color: $page-bg-color;
+  --header-bg: rgba($page-bg-color, $transparency);
+  // 顶部导航条高度
+  // 整个网页的背景颜色
+  --page-base-text-color: #262626;
+  --scrollbar-track-base-color: #cacaca;
+  --scrollbar-thumb-base-color: rgb(107, 253, 131);
+}
+
+html[class="dark"] {
+  $page-bg-color: #262626;
+  --page-base-text-color: #f0f0f0;
+  --page-bg-color: #262626;
+  --header-bg: rgba($page-bg-color, $transparency);
+  --scrollbar-track-base-color: #646464;
+  --scrollbar-thumb-base-color: rgb(68, 129, 243);
+}

@@ -1,9 +1,14 @@
 <template>
-	<div class="w-full bg-white dark:bg-#262626 text-black dark:text-white">
+	<Header />
+	<main class="w-full page-conatiner">
 		<slot></slot>
-	</div>
+	</main>
 </template>
 <script setup lang='ts'>
 
 </script>
-<style lang='scss'></style>
+<style lang='scss'>
+.page-conatiner {
+	margin-top: var(--header-height, 60px);
+}
+</style>
