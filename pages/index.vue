@@ -1,8 +1,6 @@
 <template>
 	<div class="container min-h-screen mx-auto">
-		<ul>
-			<li v-for="i in 100">{{ i }}</li>
-		</ul>
+		<h1>开发中</h1>
 	</div>
 </template>
 <script setup lang='ts'>
@@ -11,13 +9,13 @@ definePageMeta({
 	title: "Home | 首页"
 })
 
-const res = await useAllRepos()
+// const res = await useAllRepos()
 
-const repos = computed(() => {
-	return res.data.value
-})
+// const repos = computed(() => {
+// 	return res.data.value
+// })
 
-console.log(repos.value)
+// console.log(repos.value)
 
 </script>
 <style lang='scss'>
