@@ -1,4 +1,4 @@
-import { $fetchGithub } from "../utils/fetchGithub";
+import { Octokit } from "@octokit/rest";
 
 /* 
   获取github所有的仓库
@@ -8,11 +8,11 @@ import { $fetchGithub } from "../utils/fetchGithub";
 	full_name: 按照仓库名称排序
 */
 export default defineEventHandler(async (event: any) => {
+  const { github } = useRuntimeConfig();
 
-  const repose = await $fetchGithub<any[]>(
-    `user/repos? ` + ["sort=updated", "direction=desc", "visibility=public"].join("&")
-  );
-  return repose?.filter((item: any) => {
-    return !item.private || !item.fork;
+  const octokit = new Octokit({
+    auth: github.token,
   });
+
+  return await octokit.repos.listForAuthenticatedUser();
 });

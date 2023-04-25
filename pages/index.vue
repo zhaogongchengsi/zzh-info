@@ -1,6 +1,6 @@
 <template>
 	<div class="container min-h-screen mx-auto">
-		<h1>开发中</h1>
+		<h1 class="text-6xl text-center pt-10">开发中</h1>
 	</div>
 </template>
 <script setup lang='ts'>
@@ -10,11 +10,9 @@ definePageMeta({
 })
 
 // const res = await useAllRepos()
-
 // const repos = computed(() => {
 // 	return res.data.value
 // })
-
 // console.log(repos.value)
 
 </script>
