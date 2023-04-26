@@ -1,6 +1,6 @@
 <template>
-	<div class="container min-h-screen mx-auto">
-		<h1 class="text-6xl text-center pt-10">开发中</h1>
+	<div class="container mx-auto clearfix">
+		<UserInfoCard />
 	</div>
 </template>
 <script setup lang='ts'>

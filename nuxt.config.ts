@@ -2,7 +2,7 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
   modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
-  components: ["~/components"],
+  components: ["~/components", "~/views"],
   css: ["~/assets/variable.scss", "@unocss/reset/tailwind.css", "~/assets/main.scss"],
 
   colorMode: {
@@ -35,6 +35,12 @@ export default defineNuxtConfig({
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: "Nuxt Starter" },
+      ],
+      script: [
+        {
+          type: "text/javascript",
+          src: "/tilt.js",
+        },
       ],
       noscript: [{ children: "JavaScript is required" }],
     },
