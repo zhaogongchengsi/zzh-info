@@ -19,6 +19,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts(),
   ],
+  include: ["./constants/*", "./pages/*", "./views/*", "./layouts/*", "./composables/*", "components/*"],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),

@@ -1,7 +1,6 @@
 export default defineAppConfig({
   title: "Blog",
-  desc: "广告位招租",
-
+  subTitle: "Hello",
   github: {
     user: "zhaogongchengsi",
     link: "https://github.com/zhaogongchengsi",

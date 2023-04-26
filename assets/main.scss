@@ -25,6 +25,32 @@ body {
   }
 }
 
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: var(--scroll-width, 8px);
+    height: var(--scroll-height, 8px);
+  }
+
+  // 轨道
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-base-color);
+    border-radius: 5px;
+  }
+
+  // 滚动条
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-base-color);
+    border-radius: 10px;
+  }
+  
+  &-none {
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
 .rotate {
   display: inline-block;
   animation: rotate 2s infinite linear;

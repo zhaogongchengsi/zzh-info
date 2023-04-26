@@ -16,6 +16,12 @@ html {
   --page-base-text-color: #262626;
   --scrollbar-track-base-color: #cacaca;
   --scrollbar-thumb-base-color: rgb(107, 253, 131);
+
+  $colors: #f00, #0f0, #00f, #ff0, #0ff, #f0f;
+  
+  @for $i from 1 through 6 {
+    --h#{$i}-base-color: nth($colors, $i);
+  }
 }
 
 html[class="dark"] {
@@ -25,4 +31,9 @@ html[class="dark"] {
   --header-bg: rgba($page-bg-color, $transparency);
   --scrollbar-track-base-color: #646464;
   --scrollbar-thumb-base-color: rgb(68, 129, 243);
+
+  $colors: #f00, #0f0, #00f, #ff0, #0ff, #f0f;
+  @for $i from 1 through 6 {
+    --h#{$i}-base-color: nth($colors, $i);
+  }
 }
