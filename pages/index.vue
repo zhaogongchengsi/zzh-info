@@ -13,14 +13,12 @@ definePageMeta({
 // const repos = computed(() => {
 // 	return res.data.value
 // })
-
 // console.log(repos.value)
 
+const { data } = await useGithubUser()
 
+console.log(data.value)
 
-const res = await useGithubUser()
-
-console.log(res.data.value)
 
 </script>
 <style lang='scss'>

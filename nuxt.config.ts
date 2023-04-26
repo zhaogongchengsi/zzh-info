@@ -1,19 +1,17 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: [
-    "@unocss/nuxt",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
-    "@nuxtjs/google-fonts",
-    "@nuxt/devtools",
-  ],
+  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
   components: ["~/components"],
   css: ["~/assets/variable.scss", "@unocss/reset/tailwind.css", "~/assets/main.scss"],
 
   colorMode: {
     classSuffix: "",
+  },
+
+  devtools: {
+    // Enable devtools (default: true)
+    enabled: false,
   },
 
   googleFonts: {

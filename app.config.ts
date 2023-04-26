@@ -3,7 +3,7 @@ export default defineAppConfig({
   desc: "广告位招租",
 
   github: {
-    user: "zhaogongcehngsi",
+    user: "zhaogongchengsi",
     link: "https://github.com/zhaogongchengsi",
   },
 });

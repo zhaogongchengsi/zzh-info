@@ -1,3 +1,3 @@
 export default async function () {
-  return await useFetch("api/info");
+  return await useFetch("api/user");
 }
