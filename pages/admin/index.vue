@@ -71,9 +71,7 @@ const dmessage = ref('')
 const submit = async () => {
 	isLoading.value = true
 	const hash = md5(issueInfo.password)
-
-	console.log(hash)
-
+	
 	const { data } = await useFetch('api/addBlog', {
 		method: 'POST',
 		body: {
