@@ -9,15 +9,12 @@ definePageMeta({
 	title: "Home | 首页"
 })
 
-// const res = await useAllRepos()
-// const repos = computed(() => {
-// 	return res.data.value
-// })
-// console.log(repos.value)
+// const { data } = await useAllRepos()
 
-const { data } = await useGithubUser()
+// const { data } = await useGithubUser()
 
-console.log(data.value)
+// const { data } = await useLanguages()
+
 
 
 </script>

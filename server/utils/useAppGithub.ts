@@ -6,5 +6,5 @@ export default function () {
       message: "获取github 配置信息失败，请在appconfig 内配置",
     });
   }
-  return config.github as { user: string; link: string };
+  return config.github as { user: string; link: string; noLanguage: string[] };
 }

@@ -5,5 +5,6 @@ export default defineAppConfig({
   github: {
     user: "zhaogongchengsi",
     link: "https://github.com/zhaogongchengsi",
+    noLanguage: ["Java", "Python", "SugarSS", "Stylus", "Shell", "AppleScript"],
   },
 });
