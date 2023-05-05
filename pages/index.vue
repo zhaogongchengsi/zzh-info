@@ -3,20 +3,19 @@
 		<div class="w-2/3 mx-auto ">
 			<ContentDoc class="content-info" path="/" />
 
-			<ul class="flex gap-3">
-				<li>
-					<a href="#" class="flex items-center gap-2">
-						<div class="i-tabler-brand-github w-5 h-5" />
-						<span class="text-4">github</span>
-					</a>
-				</li>
-				<li>
-					<nuxt-link to="language" class="gap-2 flex items-center">
-						<div class="i-tabler-language-hiragana w-5 h-5" />
-						<span class="text-4">language</span>
+			<nuxt-link to="language" class="gap-2 flex items-center">
+				<div class="i-tabler-language-hiragana w-5 h-5" />
+				<span class="text-4">language</span>
+			</nuxt-link>
+
+			<ul class="flex flex-col gap-3 my-5">
+				<li v-for="(item) in blogList" class="hover:shadow">
+					<nuxt-link :to="'content-' + item.user + '/' + item.repo" class="p-3 border block">
+						<span>{{ item.title }}</span>
 					</nuxt-link>
 				</li>
 			</ul>
+
 		</div>
 	</div>
 </template>
@@ -28,6 +27,14 @@ definePageMeta({
 
 // const { data } = await useAllRepos()
 // const { data } = await useGithubUser()
+const blogList = [
+	{
+		title: "第一篇",
+		user: "zhaogongchengsi",
+		repo: "zzh-blog"
+	}
+]
+
 </script>
 <style lang='scss'>
 .logo {
