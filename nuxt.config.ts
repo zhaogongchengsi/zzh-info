@@ -1,7 +1,14 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts", "@nuxt/content"],
+  modules: [
+    "@unocss/nuxt",
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/google-fonts",
+    "@nuxt/content",
+  ],
   components: ["~/components", "~/views"],
   css: ["~/assets/variable.scss", "@unocss/reset/tailwind.css", "~/assets/main.scss"],
 
@@ -46,6 +53,19 @@ export default defineNuxtConfig({
     },
   },
 
+  content: {
+    highlight: {
+      theme: {
+        // Default theme (same as single string)
+        default: "github-light",
+        // Theme used if `html.dark`
+        dark: "github-dark",
+        // Theme used if `html.sepia`
+        sepia: "monokai",
+      },
+    },
+  },
+
   nitro: {
     esbuild: {
       options: {
@@ -53,7 +73,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   devServer: {
     port: 3060,
     host: "localhost",

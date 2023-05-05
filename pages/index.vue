@@ -2,7 +2,7 @@
 	<div class="container mx-auto clearfix">
 		<div class="w-2/3 mx-auto ">
 			<ContentDoc class="content-info" path="/" />
-			
+
 			<ul class="flex gap-3">
 				<li>
 					<a href="#" class="flex items-center gap-2">
@@ -37,14 +37,5 @@ definePageMeta({
 
 .content-info {
 	margin-top: 30px;
-
-	h1 {
-		font-size: 30px;
-	}
-
-	p {
-		font-size: 20px;
-		margin: 20px 0;
-	}
 }
 </style>
