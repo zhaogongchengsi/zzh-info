@@ -1,7 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
+  modules: ["@unocss/nuxt", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxtjs/google-fonts", "@nuxt/content"],
   components: ["~/components", "~/views"],
   css: ["~/assets/variable.scss", "@unocss/reset/tailwind.css", "~/assets/main.scss"],
 

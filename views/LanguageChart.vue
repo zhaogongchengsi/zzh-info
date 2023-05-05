@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full h-150 overflow-auto scrollbar-none">
-		<div v-if="pending" class="w-full h-full flex justify-center items-center flex-col border rounded">
+	<div class="w-full h-full overflow-auto scrollbar-none">
+		<div v-if="pending" class="w-full h-full flex justify-center items-center flex-col border rounded py-5">
 
 			<span>正在统计</span>
 

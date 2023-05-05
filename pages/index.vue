@@ -1,13 +1,22 @@
 <template>
 	<div class="container mx-auto clearfix">
-		<UserInfoCard />
-		<div class="w-full px-4 lg:px-60 my-5 md:my-20">
-			<ClientOnly fallback-tag="div" fallback="Loading comments...">
-				<LanguageChart />
-			</ClientOnly>
-			<p class="mt-10 text-xs">数据来源 <a class="text-green-500 "
-					href="https://github.com/zhaogongchengsi">GitHub</a>,可能不够准确，仅供参考 例如 React 由于是使用的是jsx 在统计时一并计算在 jsx 和 tsx
-				内</p>
+		<div class="w-2/3 mx-auto ">
+			<ContentDoc class="content-info" path="/" />
+			
+			<ul class="flex gap-3">
+				<li>
+					<a href="#" class="flex items-center gap-2">
+						<div class="i-tabler-brand-github w-5 h-5" />
+						<span class="text-4">github</span>
+					</a>
+				</li>
+				<li>
+					<nuxt-link to="language" class="gap-2 flex items-center">
+						<div class="i-tabler-language-hiragana w-5 h-5" />
+						<span class="text-4">language</span>
+					</nuxt-link>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
@@ -24,5 +33,18 @@ definePageMeta({
 .logo {
 	background-color: #000;
 	border-radius: 15px;
+}
+
+.content-info {
+	margin-top: 30px;
+
+	h1 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 20px;
+		margin: 20px 0;
+	}
 }
 </style>
