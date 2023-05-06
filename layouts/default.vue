@@ -1,4 +1,5 @@
 <template>
+	<NuxtLoadingIndicator />
 	<Header />
 	<main class="w-full page-conatiner">
 		<slot></slot>
